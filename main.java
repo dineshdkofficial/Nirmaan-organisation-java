@@ -1,23 +1,82 @@
-package day11;
+package day12;
+import java.util.Scanner;
 
 public class main {
 	public static void main(String[] args) {
-	Employee emp =new Employee("Dinesh",22,700219725l,"IT");
-			System.out.println(emp.getEmpName());
-	System.out.println(emp.getEmpAge());
-	System.out.println(emp.getEmpPhoneNo());
-	System.out.println(emp.getEmpDepartment());
-	
-	System.out.println(emp);
-	
-	Employee emp1 =new Employee();
-	emp1.setEmpName("kumar");
-	emp1.setEmpAge(20);
-	emp1.setEmpPhoneNo(207856963662l);
-	emp1.setEmpDepartment("java");
-	
-	
-	
+		java.util.Scanner sc=new Scanner(System.in);
+		boolean isTrue=true;
+		Singlebook book=new Singlebook();
+		
+		while(isTrue) {
+			System.out.println();
+			System.out.println("1 for add");
+			System.out.println("2 for show");
+			System.out.println("0 for exit");
+			int value=sc.nextInt();
+			sc.nextLine();
+			switch(value) {
+		
+			case 1:
+			{
+				System.out.println("title");
+				String title =sc.nextLine();
+				book.setTitle(title);
+				
+				System.out.println(" Author");
+				String  Author =sc.nextLine();
+				book.setAuthor( Author);
+				
+				
+				System.out.println(" Price");
+				double  Price =sc.nextInt();
+				book.setPrice( Price);
+				
+
+				System.out.println(" Numberofcopies");
+				int  Numberofcopies =sc.nextInt();
+				book.setNumberofcopies(Numberofcopies);
+				break;
+			}
+		
+			case 2:
+			{
+				System.out.println("title");
+				String title =sc.nextLine();
+				book.setTitle(title);
+				
+				System.out.println(" Author");
+				String  Author =sc.nextLine();
+				book.setAuthor( Author);
+				
+				
+				System.out.println(" Price");
+				double  Price =sc.nextInt();
+				book.setPrice( Price);
+				
+
+				System.out.println(" Numberofcopies");
+				int  Numberofcopies =sc.nextInt();
+				book.setNumberofcopies(Numberofcopies);
+				break;
 			
+				
+			}
+			case 3:
+			{
+				System.out.println(book.toString());
+				break;
+				}
+			case 0:
+			{
+				isTrue=false;
+				System.out.println("Thank you");
+				break;
+			}
+			
+		}
 	}
 }
+		}
+	
+
+
