@@ -1,82 +1,28 @@
-package day12;
+package day15;
+
 import java.util.Scanner;
 
 public class main {
-	public static void main(String[] args) {
-		java.util.Scanner sc=new Scanner(System.in);
-		boolean isTrue=true;
-		Singlebook book=new Singlebook();
+	public static void main(String[]agrs) {
+		Calculator Calc=new Calculator();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the firstNum ");
+		int firstNum=sc.nextInt();
+		System.out.println("Enter the secondNum ");
+		int secondNum=sc.nextInt();
 		
-		while(isTrue) {
-			System.out.println();
-			System.out.println("1 for add");
-			System.out.println("2 for show");
-			System.out.println("0 for exit");
-			int value=sc.nextInt();
-			sc.nextLine();
-			switch(value) {
 		
-			case 1:
-			{
-				System.out.println("title");
-				String title =sc.nextLine();
-				book.setTitle(title);
-				
-				System.out.println(" Author");
-				String  Author =sc.nextLine();
-				book.setAuthor( Author);
-				
-				
-				System.out.println(" Price");
-				double  Price =sc.nextInt();
-				book.setPrice( Price);
-				
-
-				System.out.println(" Numberofcopies");
-				int  Numberofcopies =sc.nextInt();
-				book.setNumberofcopies(Numberofcopies);
-				break;
-			}
+		System.out.println("Addition");
+		System.out.println(Calc.add(firstNum,secondNum));
 		
-			case 2:
-			{
-				System.out.println("title");
-				String title =sc.nextLine();
-				book.setTitle(title);
-				
-				System.out.println(" Author");
-				String  Author =sc.nextLine();
-				book.setAuthor( Author);
-				
-				
-				System.out.println(" Price");
-				double  Price =sc.nextInt();
-				book.setPrice( Price);
-				
-
-				System.out.println(" Numberofcopies");
-				int  Numberofcopies =sc.nextInt();
-				book.setNumberofcopies(Numberofcopies);
-				break;
-			
-				
-			}
-			case 3:
-			{
-				System.out.println(book.toString());
-				break;
-				}
-			case 0:
-			{
-				isTrue=false;
-				System.out.println("Thank you");
-				break;
-			}
-			
-		}
+		System.out.println("Substraction");
+		System.out.println(Calc.sub(firstNum,secondNum));
+		
+		System.out.println("Multiply");
+		System.out.println(Calc.mul(firstNum,secondNum));
+		
+		System.out.println("Division");
+		System.out.println(Calc.div(firstNum,secondNum));
 	}
+
 }
-		}
-	
-
-
